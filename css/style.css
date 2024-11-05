@@ -29,11 +29,10 @@ nav li a:hover{
 
   color: #F4F6FF;
   text-align: center;
-}
 
-.sec-sub-title{
-  margin: 0 25%;
+  border: 5px solid white; 
 }
+.sec-title{}
 
 .img-logo{
   border: 10px solid #EC8305;
@@ -69,6 +68,20 @@ nav li a:hover{
 
   font-size: 18px;
   font-weight: normal;
+}
+
+@media (max-width: 768px) {
+  .img-logo {
+    width: 150px; /* Make logo smaller on mobile */
+  }
+
+  .txt-pbe{
+    font-size: 32px;
+  }
+
+  .pr-title-txt{
+    text-align: justify;
+  }
 }
 
 /* About Us Styles */
