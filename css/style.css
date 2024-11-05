@@ -19,7 +19,7 @@ nav li a:hover,
     opacity: 0.6;
 }
 
-/* Homepage Styles */
+/* Home-page Styles */
 #home-section {
     display: flex;
     flex-direction: column;
