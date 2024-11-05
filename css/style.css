@@ -1,172 +1,161 @@
 /* Body Styles */
-body{
-  background-color: #091057;
+body {
+    background-color: #091057;
 }
 
 /* Navigation Bar Styles */
-nav{
-  background-color: #F4F6FF;
-  color: #181C14;
-  border-bottom: 3px solid #EC8305;
-  position: fixed;
-}
-nav li a:hover{
-  background-color: #F3C623;
-  opacity: 0.6;
-}
-.dropdown-menu a:hover{
-  background-color: #F3C623;
-  opacity: 0.6;
+nav {
+    background-color: #F4F6FF;
+    color: #181C14;
+    border-bottom: 3px solid #EC8305;
+    position: fixed;
+    width: 100%; /* Ensure navbar spans full width */
+    z-index: 1000; /* Keep navbar above other content */
 }
 
-/* Homepage Styles */
-#home-section{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  gap: 2rem;
-
-  color: #F4F6FF;
-  text-align: center;
+nav li a:hover,
+.dropdown-menu a:hover {
+    background-color: #F3C623;
+    opacity: 0.6;
 }
 
-.img-logo{
-  border: 10px solid #EC8305;
-  border-radius: 50%;
-  margin: 10px;
+/* Home-page Styles */
+#home-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 2rem;
+    color: #F4F6FF;
+    text-align: center;
 }
 
-.txt-pbe{
-  color: #F3C623;
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: 65px;
-  font-family: serif;
-  padding: 3px;
-  margin: 8px;
-}
-.sec-sub-title{
-  margin: 0 15%;
-  border: 5px solid #EC8305; 
-}
-.sub-title-txt{
-  padding: 2px;
-  margin: 8px;
-
-  text-transform: capitalize;
-
-  font-style: italic;
-  font-weight: bold;
-  font-size: 32px;
-}
-.pr-title-txt{
-  padding: 2px;
-  margin: 8px;
-
-  text-transform: lowercase;
-
-  font-size: 18px;
-  font-weight: normal;
+.img-logo {
+    border: 10px solid #EC8305;
+    border-radius: 50%;
+    margin: 10px;
 }
 
-/* About-Us styles */
-#m-v-section{
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center;
-  color: #F4F6FF;
-  text-align: center;
-  font-size: 30px;
-  padding: 30px;
+.txt-pbe {
+    color: #F3C623;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 65px;
+    font-family: serif;
+    padding: 3px;
+    margin: 8px;
 }
 
-.pbe-mission{
-  border: 5px solid #EC8305;
-  height: 500px;
-  width: 500px;
-  margin-left: 12.5%;
-  margin-left: 10%;
-}
-.pbe-vision{
-  border: 5px solid #EC8305;
-  height: 500px;
-  width: 500px;
-  margin-right: 10%;
-  margin-left: 12.5%;
+.sec-sub-title {
+    margin: 0 15%;
+    border: 5px solid #EC8305; 
 }
 
-.m-v-label{
-  font-family: serif;
-  font-size: 75px;
-  padding: 15px;
-  margin: 0;
+.sub-title-txt {
+    padding: 2px;
+    margin: 8px;
+    text-transform: capitalize;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 32px;
 }
 
-#m-v-section div p{
-  padding: 30px;
+.pr-title-txt {
+    padding: 2px;
+    margin: 8px;
+    text-transform: lowercase;
+    font-size: 18px;
+    font-weight: normal;
 }
 
-/* Footer page styles */
-#footer-section{
-  background-color: #F4F6FF;
-  color: #181C14;
+/* Mission and Vision Section Styles */
+#m-v-section {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    color: #F4F6FF;
+    text-align: center;
+    font-size: 30px;
+    padding: 30px;
+}
 
-  border-top: 2px solid #EC8305;
-  padding: 15px;
-  margin: 0px;
+.pbe-mission,
+.pbe-vision {
+    border: 5px solid #EC8305;
+    height: 500px;
+    width: 500px;
+    margin: 0 12.5%; /* Adjusted margin for both sides */
+}
 
-  text-align: center;
+.m-v-label {
+    font-family: serif;
+    font-size: 75px;
+    padding: 15px;
+    margin: 0;
+}
+
+#m-v-section div p {
+    padding: 30px;
+}
+
+/* Footer Styles */
+#footer-section {
+    background-color: #F4F6FF;
+    color: #181C14;
+    border-top: 2px solid #EC8305;
+    padding: 15px;
+    margin: 0;
+    text-align: center;
 }
 
 /* Media Queries for Mobile View */
 @media (max-width: 768px) {
+    .img-logo {
+        height: 100px;
+        border: 3px solid #EC8305;
+    }
 
-  .img-logo{
-    height: 100px;
-    border: 3px solid #EC8305;
-  }
+    #home-section {
+        height: auto; /* Allow height to adjust based on content */
+        padding: 20px; /* Add padding for mobile */
+    }
 
-  #home-section {
-    height: auto; /* Allow height to adjust based on content */
-    padding: 20px; /* Add padding for mobile */
-  }
+    .txt-pbe {
+        font-size: 40px; /* Reduce font size for mobile */
+    }
 
-  .txt-pbe {
-    font-size: 40px; /* Reduce font size for mobile */
-  }
+    .sub-title-txt {
+        font-size: 24px; /* Reduce font size for mobile */
+    }
 
-  .sub-title-txt {
-    font-size: 24px; /* Reduce font size for mobile */
-  }
+    .pr-title-txt {
+        font-size: 16px; /* Reduce font size for mobile */
+    }
 
-  .pr-title-txt {
-    font-size: 16px; /* Reduce font size for mobile */
-  }
+    #m-v-section {
+        flex-direction: column; /* Stack mission and vision vertically */
+        align-items: center; /* Center align */
+        padding: 15px; /* Reduce padding */
+    }
 
-  #m-v-section {
-    flex-direction: column; /* Stack mission and vision vertically */
-    align-items: center; /* Center align */
-    padding: 15px; /* Reduce padding */
-  }
+    .pbe-mission,
+    .pbe-vision {
+        width: 90%; /* Make boxes wider on mobile */
+        height: auto; /* Allow height to adjust based on content */
+        margin: 10px 0; /* Add margin for spacing */
+    }
 
-  .pbe-mission, .pbe-vision {
-    width: 90%; /* Make boxes wider on mobile */
-    height: auto; /* Allow height to adjust based on content */
-    margin: 10px 0; /* Add margin for spacing */
-  }
+    .m-v-label {
+        font-size: 50px; /* Reduce font size for mobile */
+    }
 
-  .m-v-label {
-    font-size: 50px; /* Reduce font size for mobile */
-  }
+    #footer-section {
+        padding: 10px; /* Reduce padding for mobile */
+    }
 
-  #footer-section {
-    padding: 10px; /* Reduce padding for mobile */
-  }
-
-  nav {
-    padding: 10px; /* Add padding to navbar */
-  }
+    nav {
+        padding: 10px; /* Add padding to navbar */
+    }
 }
