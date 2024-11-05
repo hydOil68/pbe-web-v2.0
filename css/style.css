@@ -1,0 +1,76 @@
+/* Body Styles */
+body{
+  background-color: #091057;
+}
+
+/* Navigation Bar Styles */
+nav{
+  background-color: #F4F6FF;
+  color: #181C14;
+  border-bottom: 3px solid #EC8305;
+}
+nav li a:hover{
+  background-color: #F3C623;
+  opacity: 0.6;
+}
+.dropdown-menu a:hover{
+  background-color: #F3C623;
+    pacity: 0.6;
+}
+
+/* Homepage Styles */
+#home-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 2rem;
+
+  color: #F4F6FF;
+  text-align: center;
+
+  border: 10px solid white;
+}
+
+.sec-sub-title{
+  margin: 0 25%;
+}
+
+.img-logo{
+  border: 10px solid #EC8305;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.txt-pbe{
+  color: #F3C623;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 65px;
+  font-family: serif;
+  padding: 3px;
+  margin: 8px;
+}
+
+.sub-title-txt{
+  padding: 2px;
+  margin: 8px;
+
+  text-transform: capitalize;
+
+  font-style: italic;
+  font-weight: bold;
+  font-size: 32px;
+}
+.pr-title-txt{
+  padding: 2px;
+  margin: 8px;
+
+  text-transform: lowercase;
+
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/* About Us Styles */
