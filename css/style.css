@@ -1,47 +1,58 @@
+/* Root Variables for Color Palette */
+:root {
+    --primary-bg-color: #091057;
+    --secondary-bg-color: #F4F6FF;
+    --accent-color: #EC8305;
+    --highlight-color: #F3C623;
+    --text-color: #181C14;
+}
+
 /* Body Styles */
 body {
-    background-color: #091057;
+    background-color: var(--primary-bg-color);
+    color: var(--secondary-bg-color);
 }
 
 /* Navigation Bar Styles */
 nav {
-    background-color: #F4F6FF;
-    color: #181C14;
-    border-bottom: 3px solid #EC8305;
+    background-color: var(--secondary-bg-color);
+    color: var(--text-color);
+    border-bottom: 3px solid var(--accent-color);
     position: fixed;
-    width: 100%; /* Ensure navbar spans full width */
-    z-index: 1000; /* Keep navbar above other content */
+    width: 100%; 
+    z-index: 1000; 
 }
 
 nav li a:hover,
 .dropdown-menu a:hover {
-    background-color: #F3C623;
-    opacity: 0.6;
+    background-color: var(--highlight-color);
+    opacity: 0.8;
+    transition: background-color 0.3s ease; /* Smooth transition */
 }
 
 /* Home-page Styles */
-#home-section {
+#home-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: auto; 
     gap: 2rem;
-    color: #F4F6FF;
+    color: var(--secondary-bg-color);
     text-align: center;
 }
 
 .img-logo {
-    border: 10px solid #EC8305;
+    border: 10px solid var(--accent-color);
     border-radius: 50%;
     margin: 10px;
 }
 
 .txt-pbe {
-    color: #F3C623;
+    color: var(--highlight-color);
     text-transform: uppercase;
     font-weight: 800;
-    font-size: 65px;
+    font-size: 4rem; /* Use rem for scalability */
     font-family: serif;
     padding: 3px;
     margin: 8px;
@@ -49,7 +60,7 @@ nav li a:hover,
 
 .sec-sub-title {
     margin: 0 15%;
-    border: 5px solid #EC8305; 
+    border: 5px solid var(--accent-color);
 }
 
 .sub-title-txt {
@@ -58,41 +69,46 @@ nav li a:hover,
     text-transform: capitalize;
     font-style: italic;
     font-weight: bold;
-    font-size: 32px;
+    font-size: 2rem; /* Use rem for scalability */
 }
 
 .pr-title-txt {
     padding: 2px;
     margin: 8px;
     text-transform: lowercase;
-    font-size: 18px;
+    font-size: 1.125rem; /* Use rem for scalability */
     font-weight: normal;
 }
 
 /* Mission and Vision Section Styles */
-#m-v-section {
+#m-v-container {
     display: flex;
     flex-direction: row;
     align-content: center;
     justify-content: center;
-    color: #F4F6FF;
+    color: var(--secondary-bg-color);
     text-align: center;
-    font-size: 30px;
+    font-size: 1.875rem; /* Use rem for scalability */
     padding: 30px;
 }
 
-.pbe-mission,
-.pbe-vision {
-    border: 5px solid #EC8305;
-    height: 500px;
-    width: 500px;
-    margin: 0 12.5%; /* Adjusted margin for both sides */
+.pbe-mv-content{
+    font-style: italic;
+    margin: 0px 15px;
+}
+
+.pbe-mv-content-container {
+    border: 5px solid var(--accent-color);
+    height: 400px; 
+    width: 400px; 
+    margin: 0 15px; 
 }
 
 .m-v-label {
     font-family: serif;
-    font-size: 75px;
-    padding: 15px;
+    font-size: 3.125rem; /* Use rem for scalability */
+    font-weight: bold;
+    padding: 10px; 
     margin: 0;
 }
 
@@ -102,60 +118,72 @@ nav li a:hover,
 
 /* Footer Styles */
 #footer-section {
-    background-color: #F4F6FF;
-    color: #181C14;
-    border-top: 2px solid #EC8305;
+    background-color: var(--secondary-bg-color);
+    color: var(--text-color);
+    border-top: 2px solid var(--accent-color);
     padding: 15px;
     margin: 0;
     text-align: center;
 }
 
-/* Media Queries for Mobile View */
+/* Media Queries for Small Screens */
 @media (max-width: 768px) {
-    .img-logo {
-        height: 100px;
-        border: 3px solid #EC8305;
+    /* Adjust body styles */
+    body {
+        font-size: 14px; /* Decrease base font size for smaller screens */
     }
 
-    #home-section {
-        height: auto; /* Allow height to adjust based on content */
-        padding: 20px; /* Add padding for mobile */
+    /* Navbar styles */
+    nav {
+        padding: 10px; /* Add some padding */
+    }
+
+    nav li a {
+        font-size: 1rem; /* Adjust font size for links */
+    }
+
+    /* Home-page styles */
+    #home-container {
+        padding: 10px; /* Add padding to the home container */
+    }
+
+    .img-logo {
+        border: 5px solid var(--accent-color);
+        height: 150px;
+        border-radius: 50%;
+        margin: 10px;
     }
 
     .txt-pbe {
-        font-size: 40px; /* Reduce font size for mobile */
+        font-size: 2.5rem; /* Smaller font size for the title */
     }
 
     .sub-title-txt {
-        font-size: 24px; /* Reduce font size for mobile */
+        font-size: 1.5rem; /* Smaller subtitle font size */
     }
 
     .pr-title-txt {
-        font-size: 16px; /* Reduce font size for mobile */
+        font-size: 1rem; /* Smaller paragraph font size */
     }
 
-    #m-v-section {
+    /* Mission and Vision Section Styles */
+    #m-v-container {
         flex-direction: column; /* Stack mission and vision vertically */
-        align-items: center; /* Center align */
-        padding: 15px; /* Reduce padding */
+        align-items: center; /* Center align items */
     }
 
-    .pbe-mission,
-    .pbe-vision {
-        width: 90%; /* Make boxes wider on mobile */
+    .pbe-mv-content-container {
+        width: 90%; /* Make width responsive */
         height: auto; /* Allow height to adjust based on content */
-        margin: 10px 0; /* Add margin for spacing */
+        margin: 10px 0; /* Adjust margin for spacing */
     }
 
     .m-v-label {
-        font-size: 50px; /* Reduce font size for mobile */
+        font-size: 2rem; /* Smaller font size for labels */
     }
 
+    /* Footer Styles */
     #footer-section {
-        padding: 10px; /* Reduce padding for mobile */
-    }
-
-    nav {
-        padding: 10px; /* Add padding to navbar */
+        padding: 10px; /* Adjust padding for footer */
     }
 }
